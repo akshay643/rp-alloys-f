@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 @font-face {
   font-family: 'MyWebFont';
   src: url('./fonts/ITC\ Avant\ Garde\ Gothic\ Std\ Medium.otf') format('woff2');
@@ -18,7 +22,8 @@
 .navbar {
   margin: 10px;
   display: flex;
-  /* align-items: center; */
+  padding: 1.5rem;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -54,10 +59,11 @@
   position: fixed;
   top: 0;
   z-index: 99999;
-  left: 0;
+  left: -100%;
   width: 50%;
   height: 100%;
   display: flex;
+
   justify-content: center;
   align-items: center;
   background: #111;
@@ -65,7 +71,7 @@
 }
 
 .fullPageMenu.active {
-  left: -100%;
+  left: 0%;
 }
 
 .fullPageMenu .nav {
@@ -691,6 +697,10 @@ form {
   border: 0;
 }
 
+input:focus {
+  outline-width: 0;
+}
+
 @media screen and (min-width: 360px) and (max-width: 749px) {
   .section-6 {
     display: flex;
@@ -846,5 +856,27 @@ form {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+/* /* scroll to top */
+
+.scroll {
+  transform: scale(0.1);
+  background: transparent;
+  border: 0;
+  position: absolute;
+  bottom: 12rem;
+  right: -10rem;
+}
+
+@media screen and (min-width: 360px) and (max-width: 749px) {
+  .scroll {
+    transform: scale(0.1);
+    background: transparent;
+    border: 0;
+    position: absolute;
+    bottom: 45rem;
+    right: -10rem;
   }
 }

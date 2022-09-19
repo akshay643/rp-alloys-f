@@ -5,3 +5,7 @@ function menuToggle() {
   toggle.classList.toggle('active')
   console.log('clicked')
 }
+
+function scollToTop() {
+  document.body.scrollTop = document.documentElement.scrollTop = 0
+}
